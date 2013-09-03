@@ -4563,4 +4563,4 @@ if (typeof exports === 'object') {
   define(function() { return html.sanitize; });
 } else {
   this.sanitize = html.sanitize;
-
+}
