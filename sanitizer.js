@@ -4558,9 +4558,9 @@ var html = (function(html4) {
 })(html4);
 
 if (typeof exports === 'object') {
-  module.exports = html.sanitize;
+  module.exports = html;
 } else if (typeof define === 'function' && define.amd) {
-  define(function() { return html.sanitize; });
+  define(function() { return html; });
 } else {
-  this.sanitize = html.sanitize;
+  this.sanitize = html;
 }
