@@ -4557,14 +4557,10 @@ var html = (function(html4) {
   return html;
 })(html4);
 
-
-exports.escapeAttrib = html.escapeAttrib;
-exports.makeHtmlSanitizer = html.makeHtmlSanitizer;
-exports.makeSaxParser = html.makeSaxParser;
-exports.makeTagPolicy = html.makeTagPolicy;
-exports.normalizeRCData = html.normalizeRCData;
-exports.sanitize = html.sanitize;
-exports.sanitizeAttribs = html.sanitizeAttribs;
-exports.sanitizeWithPolicy = html.sanitizeWithPolicy;
-exports.unescapeEntities = html.unescapeEntities;
+if (typeof exports === 'object') {
+  module.exports = html.sanitize;
+} else if (typeof define === 'function' && define.amd) {
+  define(function() { return html.sanitize; });
+} else {
+  this.sanitize = html.sanitize;
 
