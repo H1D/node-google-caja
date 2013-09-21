@@ -1,4 +1,4 @@
-var window = {};
+//var window = {};
 
 /* Copyright Google Inc.
  * Licensed under the Apache Licence Version 2.0
